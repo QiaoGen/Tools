@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101411" />
+    <meta name="description" content="轻量、离线、本地读取的 DWG 图纸查看器" />
+    <title>CadReader · DWG 图纸查看器</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        window.addEventListener('DOMContentLoaded', function () {
+          document.body.style.margin = '0';
+          document.body.style.background = '#0b0e0c';
+          document.body.style.color = '#dce7df';
+          document.body.style.fontFamily = "'Avenir Next', 'PingFang SC', sans-serif";
+          document.getElementById('app').innerHTML =
+            '<main style="height:100vh;display:grid;place-items:center;text-align:center;padding:24px;box-sizing:border-box">' +
+              '<section>' +
+                '<div style="color:#d6ff45;font-size:34px;margin-bottom:20px">△</div>' +
+                '<h1 style="font-size:26px;margin:0 0 12px">CadReader 需要通过本地服务运行</h1>' +
+                '<p style="color:#7f8d83;font-size:14px;line-height:1.8;margin:0">请返回 CadReader 文件夹，双击<br>' +
+                  '<strong style="color:#d6ff45">启动CadReader.command</strong>' +
+                '</p>' +
+              '</section>' +
+            '</main>';
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

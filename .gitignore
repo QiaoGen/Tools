@@ -1,0 +1,4 @@
+# macOS metadata anywhere in this repository
+.DS_Store
+.AppleDouble
+.LSOverride

@@ -1,0 +1,24 @@
+{
+  "name": "cad-reader",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prepare:wasm": "node scripts/prepare-wasm.mjs",
+    "postinstall": "npm run prepare:wasm",
+    "dev": "vite",
+    "build": "npm run prepare:wasm && tsc && vite build",
+    "preview": "vite preview",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build --bundles app",
+    "desktop:dmg": "tauri build --bundles dmg"
+  },
+  "dependencies": {
+    "@flyfish-dev/cad-viewer": "0.8.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.0.6"
+  }
+}

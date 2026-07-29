@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="surface" x1="170" y1="120" x2="850" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#182019"/>
+      <stop offset="1" stop-color="#090C0A"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="348" y1="244" x2="708" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAFF82"/>
+      <stop offset="0.48" stop-color="#D6FF45"/>
+      <stop offset="1" stop-color="#9EC51D"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#A9C9B2" stroke-opacity=".08" stroke-width="2"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="54" y="54" width="916" height="916" rx="212" fill="url(#surface)"/>
+  <rect x="55" y="55" width="914" height="914" rx="211" fill="none" stroke="#344239" stroke-width="3"/>
+  <rect x="104" y="104" width="816" height="816" rx="164" fill="url(#grid)"/>
+
+  <path d="M512 218 778 758H246L512 218Z" fill="#D6FF45" fill-opacity=".10" filter="url(#glow)"/>
+  <path d="M512 218 778 758H246L512 218Z" fill="none" stroke="url(#lime)" stroke-width="58" stroke-linejoin="round"/>
+  <path d="M512 390 640 650H384L512 390Z" fill="#0B0F0C" stroke="#88A96E" stroke-opacity=".38" stroke-width="10" stroke-linejoin="round"/>
+
+  <circle cx="512" cy="650" r="39" fill="#0B0F0C" stroke="#E5FF76" stroke-width="20"/>
+  <path d="M512 156v92M512 776v92M156 512h104M764 512h104" stroke="#D6FF45" stroke-opacity=".58" stroke-width="12" stroke-linecap="round"/>
+  <path d="M196 268h116M196 296h72M712 730h116M756 702h72" stroke="#B7C7BC" stroke-opacity=".36" stroke-width="10" stroke-linecap="round"/>
+</svg>
