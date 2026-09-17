@@ -1,6 +1,6 @@
 # Tools
 
-面向工程现场的轻量 macOS 工具集。当前包含 DWG 图纸查看器 **CadReader** 和 S7 PLC 调试工具 **LiteS7**，均可本地运行，无需账号或云端服务。
+面向工程现场的轻量 macOS 工具集。当前包含 DWG 图纸查看器 **CadReader**、S7 PLC 调试工具 **LiteS7**、程序员计算器 **DevCalc** 和 Modbus TCP 主从站调试工具 **LiteModbus**，均可本地运行，无需账号或云端服务。
 
 [![Release](https://img.shields.io/github/v/release/QiaoGen/Tools?label=Release)](https://github.com/QiaoGen/Tools/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)](#下载)
@@ -42,12 +42,36 @@
 
 [查看 LiteS7 详细说明](LiteS7/README.md)
 
+## DevCalc
+
+替代 macOS 自带计算器的原生 app，主打**程序员计算器**：四进制同屏显示、位翻转面板、字长与符号切换、完整位运算，SwiftUI 实现。
+
+- HEX / DEC / OCT / BIN 同屏，点击行切换输入进制
+- 64 个 bit 直接点击翻转，8/16/32/64 位字长回绕
+- AND / OR / XOR / NOT / NAND / NOR、移位与循环移位、Mod
+- 附加基本模式（标准四则计算器）
+
+[查看 DevCalc 详细说明](DevCalc/README.md)
+
+## LiteModbus
+
+Modbus TCP 主从站一体化调试工具，原生 SwiftUI 实现，协议栈自研、零第三方依赖。
+
+- **主站**：点位表（变量命名、`40001.1` 位细分、九种数据类型、四种字节序）、自动轮询批量读、手动写入、报文日志
+- **看板**：关键点位提取成实时卡片大屏
+- **配方**：点位 + 目标值存成 JSON 配方，一键批量下写，可导入导出
+- **从站**：寄存器仿真（01/02/03/04/05/06/0F/10），多格式同屏（Word/Hex/无符号/有符号/Float）、双击修改、位格翻转、响应延迟模拟、内存快照
+
+[查看 LiteModbus 详细说明](LiteModbus/README.md)
+
 ## 从源码运行
 
-两个工具的构建方式和使用说明分别记录在各自目录：
+各工具的构建方式和使用说明分别记录在各自目录：
 
 - [CadReader 构建说明](CadReader/README.md#启动)
 - [LiteS7 构建说明](LiteS7/README.md#构建与运行)
+- [DevCalc 构建说明](DevCalc/README.md#构建与运行)
+- [LiteModbus 构建说明](LiteModbus/README.md#构建)
 
 ## License
 
