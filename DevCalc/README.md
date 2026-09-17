@@ -46,12 +46,17 @@ swift test
 # 生成图标（首次）
 Scripts/make-icon.sh
 
-# 打包 DevCalc.app
+# 组装 DevCalc.app（dist/DevCalc.app）
 Scripts/make-app.sh
-open build/DevCalc.app
+
+# 打包拖装 DMG（dist/DevCalc-0.1.0.dmg，含 Applications 链接）
+Scripts/package-dmg.sh
+
+# 本地运行
+open dist/DevCalc.app
 ```
 
-也可把 `build/DevCalc.app` 拖到 `/Applications` 长期使用。
+也可把 `dist/DevCalc.app` 拖到 `/Applications` 长期使用。
 
 ## 项目结构
 
